@@ -34,8 +34,8 @@ public struct Vector3<V> {
 	public init(_ value: V) { self.init(value: value) }
 }
 
-public typealias Vec3 = Vector3<Double>
-public typealias Vec3f = Vector3<Float>
+public typealias Vec3 = Vector3<Float>
+public typealias Vec3d = Vector3<Double>
 public typealias Vec3i = Vector3<Int>
 public typealias Vec3ui = Vector3<UInt>
 public typealias Vec3b = Vector3<Bool>

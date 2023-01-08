@@ -1,5 +1,5 @@
 
-extension Vector3 where V == Double {
+extension Vector3 where V: BinaryFloatingPoint {
 	// Vector Properties
 
 	public var lengthSquared: V { dot(self) }

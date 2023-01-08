@@ -1,5 +1,5 @@
 
-extension Vector4 where V == Double {
+extension Vector2 where V: BinaryFloatingPoint {
 	// Vector Properties
 
 	public var lengthSquared: V { dot(self) }
@@ -8,5 +8,6 @@ extension Vector4 where V == Double {
 	public func normalized() -> Self { self / length }
 	public mutating func normalize() { self = self.normalized() }
 
-	public func dot(_ other: Self) -> V { x * other.x + y * other.y + z * other.z + w * other.w }
+	public func dot(_ other: Self) -> V { x * other.x + y * other.y }
+	public func cross() -> Self { Self.init(x: y, y: -x) }
 }
